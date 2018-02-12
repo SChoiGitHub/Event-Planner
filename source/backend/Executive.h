@@ -194,7 +194,7 @@ class Executive{
 		bool isAttending(int eid);
 		
 		/**
-		 * This helper method sorts the event list by dates.
+		 * This method sorts the event list by dates.
 		 * @pre Executive exists
 		 * @post N/A, No changes occur.
 		 */
