@@ -67,12 +67,21 @@ class CLI{
         void newAccount();
         /**
 	     * Shows a list of events
-         * @param int - the starting index of the set of events
+         * @param e An enum value from the EventSet
+         * @param id An int that is the starting index of the set of events
 	     * @pre: none
 	     * @post: none
 	     * @return: none
 	     */
-        void listEvents(EventSet, int);
+        void listEvents(EventSet e, int id);
+        /**
+	     * Shows a list of events
+         * @param id An int that is the starting index of the set of events
+	     * @pre: none
+	     * @post: none
+	     * @return: none
+	     */
+        void listEvents(int id);
         /**
 	     * Allows for the creation of a new event by the user
 	     * @pre: none
@@ -82,28 +91,28 @@ class CLI{
         void newEvent();
         /**
 	     * Allows a user to view a specific event
-         * @param int - the unique identifier of the event
+         * @param id An int that is the unique identifier of the event
 	     * @pre: none
 	     * @post: none
 	     * @return: none
 	     */
-        void viewEvent(int);
+        void viewEvent(int id);
         /**
 	     * Allows user to set availability for the event
-         * @param int - the unique identifier of the event
+         * @param id An int that is he unique identifier of the event
 	     * @pre: user is not the creator
 	     * @post: availability set
 	     * @return: none
 	     */
-        void setAvailability(int);
+        void setAvailability(int id);
         /**
 	     * Allows users to view availabilities for an event
-         * @param int - the unique identifier of the event
+         * @param id An int that is the unique identifier of the event
 	     * @pre: none
 	     * @post: none
 	     * @return: none
 	     */
-        void viewAvailability(int);
+        void viewAvailability(int id);
 };
 
 #endif
