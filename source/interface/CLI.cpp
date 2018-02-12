@@ -27,7 +27,7 @@ void CLI::menu(){
     std::string action = input.getString("What would you like to do?: ");
 
     if(action == "events"){
-        listEvents(CLI::all, 0);
+        listEvents(0);
     }else if(action == "create"){
         newEvent();
     }else if(action == "options"){
@@ -224,7 +224,7 @@ void CLI::viewEvent(int id){
                 std::cout << "No valid input.\n";
             }
         }
-
+		delete e;
     }catch(std::exception& e){
         std::cout << "Invalid event number.\n";
     }
