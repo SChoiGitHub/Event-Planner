@@ -158,7 +158,25 @@ void CLI::newEvent(){
     std::list<std::string>* times = new std::list<std::string>();
     for(int i = 5; i < 12; i += 1){
         for(int j = 0; j < 59; j += 20){
-            std::string slot = std::to_string(i) + ":" + std::to_string(j);
+			std::string hour = "";
+			std::string minute = "";
+			
+			if(i / 10 < 1){
+				//This is a single digit. Give it a trailing zero.
+				hour += "0";
+				hour += std::to_string(i);
+			}else{
+				hour += std::to_string(i);
+			}
+			
+			if(j == 0){
+				//Give it trailing zeroes.
+				minute = "00";
+			}else{
+				minute = std::to_string(j);
+			}
+			
+            std::string slot = hour + ":" + minute;
 
             //Is a time acceptable
             std::string accept;
