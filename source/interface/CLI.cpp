@@ -196,7 +196,7 @@ void CLI::newEvent(){
             }
         }
     }
-    exec.writeRecord(exec.getEventList()->back(), exec.createRecordList(times));
+    exec.writeRecord(exec.getEventList()->back().getIDNumber(), exec.createRecordList(times));
     exec.sortEventList();
     delete times;
 }
